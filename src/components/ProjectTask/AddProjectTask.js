@@ -15,7 +15,7 @@ class AddProjectTask extends Component {
   }
 
   onChange(e){
-    this.setState({[e.target.name]: e.target.value});
+    this.setState({ [e.target.name]: e.target.value });
   }
 
   render (){
@@ -35,7 +35,7 @@ class AddProjectTask extends Component {
                     className="form-control form-control-lg"
                     name="summary"
                     value={this.state.summary}
-                    onchange={this.onChange()}
+                    onChange={this.onChange}
                     placeholder="Project Task summary"/>
                 </div>
                 <div className="form-group">
@@ -43,11 +43,11 @@ class AddProjectTask extends Component {
                     className="form-control form-control-lg"
                     placeholder="Acceptance Criteria"
                     value={this.state.acceptanceCriteria}
-                    onchange={this.onChange()}
+                    onchange={this.onChange}
                     name="acceptanceCriteria"/>
                 </div>
                 <div className="form-group">
-                  <select className="form-control form-control-lg" value={this.state.status}  onchange={this.onChange()}
+                  <select className="form-control form-control-lg" value={this.state.status}  onChange={this.onChange}
                           name="status">
                     <option value="">Select Status</option>
                     <option value="TO_DO">TO DO</option>
